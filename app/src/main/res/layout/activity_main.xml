@@ -7,41 +7,29 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-
-    <ImageView
-        android:id="@+id/ikona1"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:src="@drawable/brick"
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="nazwa produktu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ikona1"
-        android:textSize="25dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="10dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="cena"
+    <ScrollView
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:background="@drawable/alucard"
+        app:layout_constraintBottom_toTopOf="@+id/edit"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ikona1"
-        android:textSize="25dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:hint="pole do wpisywania"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:layout_width="wrap_content"
+        android:id="@+id/guzik"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        android:hint="Wyślij"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:text="Dodaj do koszyka"
-        android:layout_marginBottom="10dp"/>
+        app:layout_constraintStart_toEndOf="@+id/edit" />
 </androidx.constraintlayout.widget.ConstraintLayout>
